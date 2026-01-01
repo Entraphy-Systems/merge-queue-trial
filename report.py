@@ -5,7 +5,7 @@ def select_rows(rows, statuses):
 def prepare_report(rows, sink):
     selected = select_rows(
         rows,
-        ("finalized",),
+        ("finalized", "draft"),
     )
 
     # Return the selected rows to the caller.
