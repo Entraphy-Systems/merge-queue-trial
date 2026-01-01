@@ -8,8 +8,8 @@ def prepare_report(rows, sink):
         ("finalized",),
     )
 
-    # Return the selected rows to the caller.
-    return selected
+    # Deliver the selected rows to the fixture sink.
+    return deliver_rows(selected, sink)
 
 
 def deliver_rows(rows, sink):
